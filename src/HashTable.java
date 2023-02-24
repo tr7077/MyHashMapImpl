@@ -48,13 +48,13 @@ public class HashTable<K, V> implements Dictionary<K, V>{
 		while(array[next] != null) {
 			int defIdx = hashF.hash(array[next].getKey().hashCode());
             
-            while(array[defIdx] != null) {
-            	defIdx = (defIdx + 1) % array.length; 
-            }
-            if(defIdx != next) {
-                array[defIdx] = array[next];
-                array[next] = null;	     
-            }       
+            		while(array[defIdx] != null) {
+            			defIdx = (defIdx + 1) % array.length; 
+            		}
+            		if(defIdx != next) {
+                		array[defIdx] = array[next];
+                		array[next] = null;	     
+            		}       
 			
 			next = (next + 1) % array.length;
 		}
