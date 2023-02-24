@@ -150,11 +150,6 @@ public class HashTable<K, V> implements Dictionary<K, V>{
 		array[index] = new EntryImpl<K, V>(key, value);
 		size++;
 	}
-	private void swap(int i, int j) {
-		Entry<K, V> temp = array[i];
-		array[i] = array[j];
-		array[j] = temp;
-	}
 	
 	private static class EntryImpl<K, V> implements Dictionary.Entry<K, V>{
 
